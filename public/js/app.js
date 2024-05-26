@@ -21,7 +21,38 @@
             });
         });
     }
-    addClick();
-})();
 
+    // addClick();
+    
+    const deleteStyleHeight = () => {
+        listElements.forEach(element => {
+            if (element.children[1].getAttribute('style')) {
+                element.children[1].removeAttribute('style');
+
+                element.classList.remove('menu__item--active');
+            }
+        });
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 800) {
+            deleteStyleHeight();
+
+            // console.log(list.classList)
+
+            if (list.classList.contains('menu__links--show'))
+                list.classList.remove('menu__links--show');
+
+        } else {
+            addClick();
+        }
+    });
+
+    if (window.innerWidth <= 800) {
+        addClick();
+    }
+
+    menu.addEventListener('click', () => list.classList.toggle('menu__links--show'));
+
+})();
 // 30:14 --> 41:35

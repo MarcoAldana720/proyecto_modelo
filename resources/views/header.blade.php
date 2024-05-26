@@ -5,8 +5,9 @@
 
 <nav class="menu">
     <section class="menu__container">
-        <h1 class="menu__logo">Jordan Alex.</h1>
-        
+        <!-- <h1 class="menu__logo">Jordan Alex.</h1> -->
+        <img src="{{ asset('img/logo-blanco.svg') }}" alt="Logo" width=180px>
+
         <ul class="menu__links">
             <li class="menu__item">
                 <a href="#" class="menu__link">inicio</a>
