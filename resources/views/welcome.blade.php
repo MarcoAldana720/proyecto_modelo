@@ -11,9 +11,7 @@
 </head>
 <body>
     <!-- LLAMA EL ARCHIVO DE CABEZA -->
-    <!-- <header class="container-header"> -->
-        @include('header')
-    <!-- </header> -->
+    @include('header')
 
     <!-- CONTENIDO -->
     <div class="container-login">
@@ -39,9 +37,7 @@
     </div>
 
     <!-- LLAMA EL ARCHIVO DE COLA -->
-    <footer class="container-footer">
-        @include('footer')
-    </footer>
+    @include('footer')
 
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
