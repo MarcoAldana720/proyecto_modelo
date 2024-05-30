@@ -11,9 +11,13 @@
 </head>
 <body>
     <!-- LLAMA EL ARCHIVO DE CABEZA -->
-    @include('header')
+    <nav class="menu">
+        <section class="menu__container">
+            <img src="{{ asset('img/logo-blanco.svg') }}" alt="Logo" width=180px>
+        </section>
+    </nav>
 
-    <!-- CONTENIDO -->
+    <!-- CONTENIDO DE LOGIN -->
     <div class="container-login">
         <form action="" method="POST" class="container-center">
             <div class="container-img">
@@ -21,11 +25,11 @@
             </div>
             <label for="usuario">usuario</label>
             <br>
-            <input type="text" id="usuario" placeholder="Usuario">
+            <input type="text" id="usuario" nombre="usuario" placeholder="Usuario">
             <br><br>
             <label for="contrasena">contraseña</label>
             <br>
-            <input type="password" id="contrasena" placeholder="Contraseña">
+            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
             <br><br>
             <button type="submit">iniciar sesion</button>
             <br><br>
@@ -37,7 +41,9 @@
     </div>
 
     <!-- LLAMA EL ARCHIVO DE COLA -->
-    @include('footer')
+    <div class="container-footer">
+        <p>	&copy; Todos los Derechos Reservados, Universidad Modelo</p>
+    </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
